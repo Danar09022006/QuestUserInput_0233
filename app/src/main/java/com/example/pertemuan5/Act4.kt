@@ -22,6 +22,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role.Companion.Button
 import androidx.compose.ui.unit.dp
 
 
@@ -116,3 +118,12 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 .height(100.dp)
                 .width(300.dp)
         )
+        {
+            Column (modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp),) {
+                Text(text = "Nama : "+nama, color = Color.White)
+                Text(text = "Gender : "+jenis, color = Color.White)
+                Text(text = "Alamat : "+alamat, color = Color.White)
+            }
+        }
+    }
+}
