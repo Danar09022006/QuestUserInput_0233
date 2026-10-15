@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.text.input.TextFieldLineLimits
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -34,11 +35,27 @@ fun FormDataDiri(modifier: Modifier) {
             SingleLine = true,
             shape = MaterialTheme.shapes.large,
             modifier = Modifier.width(250.dp),
-            label = {Text(text = "Nama Lengkap")},
+            label = {Text(text = "Nama Lengkap") },
             onValueChange = {
-                var textNama = it
+                textNama = it
             }
         )
+        Row {
+            gender.forEach { item ->
+                Row(modifier = Modifier.selectable(
+                    selected = textJK == item,
+                    onClick = { textJK == item}
+                ), verticalAlignment = Alignment.CenterHorizontally) {
+                    RadioButton(
+                        selected = textJK == item,
+                        onClick = {
+                            textJK = item
+                        })
+                    Text(item)
+
+                }
+            }
+        }
     }
 }
 
