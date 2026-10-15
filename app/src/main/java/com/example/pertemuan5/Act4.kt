@@ -1,16 +1,13 @@
 package com.example.pertemuan5
 
+import android.R
+import android.R.id
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.material3.Button
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -25,8 +22,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+
 
 @Composable
 fun FormDataDiri(modifier: Modifier = Modifier) {
@@ -89,3 +86,6 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 bottom = dimensionResource(id = R.dimen.padding_medium),
                 top = dimensionResource(id = R.dimen.padding_medium)
             ),
+            thickness = dimensionResource(id = R.dimen.divider_tipis),
+            color = Color.DarkGray
+        )
