@@ -1,6 +1,5 @@
 package com.example.pertemuan5
 
-import android.R
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -15,6 +14,13 @@ fun FormDataDiri(modifier: Modifier) {
     var textAlamat by remember { mutableStateOf(value = "") }
     var textJK by remember { mutableStateOf(value = "") }
     val gender: List<String> = listOf("Laki-Laki", "Perempuan")
+
+    //variabel-variabe; untuk menyimpan data yang diperoleh dari komponen UI
+    var nama by remember {mutableStateOf(value = "")}
+    var alamat by remember {mutableStateOf(value = "")}
+    var jenis by remember {mutableStateOf(value = "")}
+
+
 }
 
 
